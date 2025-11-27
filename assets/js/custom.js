@@ -137,6 +137,45 @@
     });
   });
 
+
+
+
+  
+//RECIBIR Y MARCAR
+
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const valor = params.get('valor');
+
+  if (!valor) return;
+
+  // Buscar la caja con ese data-valor
+  const caja = document.querySelector(`.caja[data-valor="${CSS.escape(valor)}"]`);
+
+  if (caja) {
+    document.querySelectorAll('.caja').forEach(c => c.classList.remove('seleccionado'));
+    caja.classList.add('seleccionado');
+
+    // --- NUEVO: asegurar que el contador refleje la selección ---
+    const cantidadInput = caja.querySelector('.input-cantidad');
+    if (cantidadInput) {
+      // si estaba en 0 o vacío, darle valor por defecto 1
+      if (!cantidadInput.value || parseInt(cantidadInput.value, 10) === 0) {
+        cantidadInput.value = 1;
+      }
+    }
+
+    // Actualizar input oculto y total como si el usuario hubiera interactuado
+    if (typeof actualizarInputHidden === 'function') actualizarInputHidden();
+    if (typeof actualizarPrecioTotal === 'function') actualizarPrecioTotal();
+    // -----------------------------------------------------------
+
+    caja.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+});
+
+
+
 // CAJAS ENVIO
 const cajas = document.querySelectorAll(".selector-cajas .caja");
 const inputDiseno = document.getElementById("diseno");
