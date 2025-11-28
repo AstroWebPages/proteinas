@@ -1,164 +1,143 @@
-
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../images/ico.png">
+    <title>Hoard - Trabajo</title>
 
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <link rel="icon" href="../images/ico.png">
-
-        <title>Hoard - Trabajo</title>
-
-        <!-- CSS FILES -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-        <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-
-        <link href="../assets//css/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="../assets//css/hoard-astroweb.css" rel="stylesheet">
-
-
-
-        <!-- CSS Bootstrap y adicional -->
-  <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <!-- CSS FILES -->        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/css/hoard-astroweb.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link href="../assets/css/trabajo.css" rel="stylesheet">
 </head>
-    </head>
     
-    <body>
+<body>
+    <main>
+        <!-- ***** Header Area Start ***** -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <!-- ***** Logo Start ***** -->
+                            <a href="../../" class="logo">
+                                <img draggable="false" src="../assets/images/bannerlogo.png" width="100" alt="Hoard Logo">
+                            </a>
+                            <!-- ***** Logo End ***** -->
+                            
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav">
+                                <li><a href="../../">Inicio</a></li>
+                                <li><a href="/categorias">Productos</a></li>
+                                <li><a href="/contacto">Contacto</a></li>
+                                <li><a href="/trabajo/" class="active">Trabajo</a></li>
+                                <li><a href="tel:+50376106996"><i class="fa fa-phone"></i> Llamada</a></li>
+                            </ul>   
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-        <main>
+        <!-- ***** Contact Section Start ***** -->
+        <section class="contact-section section-padding" id="section_5">
+            <div class="container">
+                <div class="row">
+                    <!-- Formulario -->
+                    <div class="col-lg-5 col-12 mx-auto">
+                        <form id="customForm" class="custom-form ebook-download-form bg-white shadow" action="https://formspree.io/f/xanyzqej" method="POST" role="form">
+                            <div class="text-center mb-5">
+                                <h2 class="mb-1">Trabaja para nosotros</h2>
+                            </div>
 
-<!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav"  >
-                    <!-- ***** Logo Start ***** -->
-                    <a href="../../" class="logo">
-                        <img draggable="false" src="assets/images/bannerlogo.png" alt="">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                      <li><a href="../../" class="active">Inicio</a></li>
-                      <li><a href="/categorias">Productos</a></li>
-                      <li><a href="/contacto">Contacto</a></li>
-                      <li><a href="/trabajo/">Trabajo</a></li>
-                      <li><a href="tel:+50376106996"><i class="fa fa-phone"></i> Llamada</a></li>
-                  </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-
-
-
-                    
-
-
-            <section class="contact-section section-padding" id="section_5">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-5 col-12 mx-auto">
-                            <form id="customForm" class="custom-form ebook-download-form bg-white shadow" action="https://formspree.io/f/xanyzqej" method="POST" role="form">
-                                <div class="text-center mb-5">
-                                    <h2 class="mb-1">Trabaja para nosotros</h2>
-                                </div>
-
-                                <div class="ebook-download-form-body">
-                                    <!-- Consulta -->
-                                    <div class="input-group mb-4">
+                            <div class="ebook-download-form-body">
+                                <!-- Nombre -->
+                                <div class="input-group mb-4">
                                     <input type="text" name="consulta" id="ebook-form-name" class="form-control" aria-label="ebook-form-name" aria-describedby="basic-addon1" placeholder="Nombre" required>
                                     <span class="input-group-text" id="basic-addon1">
                                         <i class="custom-form-icon bi-person"></i>
                                     </span>
-                                    </div>
+                                </div>
 
-                                    <!-- Email -->
-                                    <div class="input-group mb-4">
+                                <!-- Email -->
+                                <div class="input-group mb-4">
                                     <input type="email" name="email" id="ebook-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="tu@email.com" aria-label="ebook-form-email" aria-describedby="basic-addon2" required>
                                     <span class="input-group-text" id="basic-addon2">
                                         <i class="custom-form-icon bi-envelope"></i>
                                     </span>
-                                    </div>
-
-                                    <!-- Botón -->
-                                    <div class="col-lg-8 col-md-10 col-8 mx-auto">
-                                    <button type="submit" class="form-control">Enviar Solicitud</button>
-                                    </div>
                                 </div>
-                                </form>
 
-                                
+                                <!-- Botón -->
+                                <div class="col-lg-8 col-md-10 col-8 mx-auto">
+                                    <button type="submit" class="form-control btn-submit">Enviar Solicitud</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
 
+                    <!-- Información de Contacto -->
+                    <div class="col-lg-6 col-12">
+                        <h2 class="mb-4">Contacto</h2>
 
+                        <p class="mb-3">
+                            <i class="bi-geo-alt me-2"></i>
+                            El Salvador
+                        </p>
 
+                        <p class="mb-2">
+                            <a href="tel:50378013735" class="contact-link">
+                                +503 7801-3735
+                            </a>
+                        </p>
 
-                        </div>
+                        <p>
+                            <a href="mailto:astrowebpages@gmail.com" class="contact-link">
+                                astrowebpages@gmail.com
+                            </a>
+                        </p>
 
-                        <div class="col-lg-6 col-12">
+                        <h6 class="site-footer-title mt-5 mb-3">Redes</h6>
 
-                            <h2 class="mb-4">Contacto</h2>
+                        <ul class="social-icon mb-4">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-instagram"></a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-facebook"></a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-whatsapp"></a>
+                            </li>
+                        </ul>
 
-                            <p class="mb-3">
-                                <i class="bi-geo-alt me-2"></i>
-                                El Salvador
-                            </p>
-
-                            <p class="mb-2">
-                                <a href="tel:50378013735" class="contact-link">
-                                    +503 7801-3735
-                                </a>
-                            </p>
-
-                            <p>
-                                <a href="mailto:astrowebpages@gmail.com" class="contact-link">
-                                    astrowebpages@gmail.com
-                                </a>
-                            </p>
-
-                            <h6 class="site-footer-title mt-5 mb-3">Redes</h6>
-
-                            <ul class="social-icon mb-4">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-                            
-                                
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
-                                </li>
-                            </ul>
-
-                            <p class="copyright-text">Copyright © 2025 Hoard
-                            <br><br><a rel="nofollow" href="https://astrowebpages.github.io/astroweb" target="_blank">designed by ᗩᔕ༒尺۝</a></p>
-                        </div>
-
+                        <p class="copyright-text">
+                            Copyright © 2025 Hoard
+                            <br><br>
+                            <a rel="nofollow" href="https://astrowebpages.github.io/astroweb" target="_blank">designed by ᗩᔕ༒尺۝</a>
+                        </p>
                     </div>
                 </div>
-            </section>
-        </main>
-        <!-- JAVASCRIPT FILES -->
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/bootstrap.bundle.min.js"></script>
-        <script src="../js/jquery.sticky.js"></script>
-        <script src="../js/click-scroll.js"></script>
-        <script src="../js/custom.js"></script>
+            </div>
+        </section>
+    </main>
 
-    </body>
+    <!-- JAVASCRIPT FILES -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/click-scroll.js"></script>
+    <script src="../js/custom.js"></script>
+</body>
 </html>
