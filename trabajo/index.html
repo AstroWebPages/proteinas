@@ -3,19 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Únete al equipo de Hoard">
     <meta name="author" content="">
     <link rel="icon" href="../images/ico.png">
     <title>Hoard - Trabajo</title>
 
-    <!-- CSS FILES -->        
+    <!-- Google Fonts -->        
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/css/hoard-astroweb.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
     <link href="../assets/css/trabajo.css" rel="stylesheet">
 </head>
     
@@ -29,17 +30,16 @@
                         <nav class="main-nav">
                             <!-- ***** Logo Start ***** -->
                             <a href="../../" class="logo">
-                                <img draggable="false" src="../assets/images/bannerlogo.png" width="100" alt="Hoard Logo">
+                                <img draggable="false" src="../assets/images/bannerlogo.png" width="100" alt="">
                             </a>
                             <!-- ***** Logo End ***** -->
-                            
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
                                 <li><a href="../../">Inicio</a></li>
                                 <li><a href="/categorias">Productos</a></li>
                                 <li><a href="/contacto">Contacto</a></li>
                                 <li><a href="/trabajo/" class="active">Trabajo</a></li>
-                                <li><a href="tel:+50376106996"><i class="fa fa-phone"></i> Llamada</a></li>
+                                <li><a href="tel:+50376106996"><i class="bi bi-phone"></i> Llamada</a></li>
                             </ul>   
                             <a class='menu-trigger'>
                                 <span>Menu</span>
@@ -51,11 +51,9 @@
             </div>
         </header>
 
-        <!-- ***** Contact Section Start ***** -->
         <section class="contact-section section-padding" id="section_5">
             <div class="container">
                 <div class="row">
-                    <!-- Formulario -->
                     <div class="col-lg-5 col-12 mx-auto">
                         <form id="customForm" class="custom-form ebook-download-form bg-white shadow" action="https://formspree.io/f/xanyzqej" method="POST" role="form">
                             <div class="text-center mb-5">
@@ -65,29 +63,56 @@
                             <div class="ebook-download-form-body">
                                 <!-- Nombre -->
                                 <div class="input-group mb-4">
-                                    <input type="text" name="consulta" id="ebook-form-name" class="form-control" aria-label="ebook-form-name" aria-describedby="basic-addon1" placeholder="Nombre" required>
-                                    <span class="input-group-text" id="basic-addon1">
+                                    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre Completo" required>
+                                    <span class="input-group-text">
                                         <i class="custom-form-icon bi-person"></i>
                                     </span>
                                 </div>
 
                                 <!-- Email -->
                                 <div class="input-group mb-4">
-                                    <input type="email" name="email" id="ebook-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="tu@email.com" aria-label="ebook-form-email" aria-describedby="basic-addon2" required>
-                                    <span class="input-group-text" id="basic-addon2">
+                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="tu@email.com" required>
+                                    <span class="input-group-text">
                                         <i class="custom-form-icon bi-envelope"></i>
                                     </span>
                                 </div>
 
+                                <!-- Teléfono -->
+                                <div class="input-group mb-4">
+                                    <input type="tel" name="telefono" id="telefono" class="form-control" placeholder="Teléfono" required>
+                                    <span class="input-group-text">
+                                        <i class="custom-form-icon bi-phone"></i>
+                                    </span>
+                                </div>
+
+                                <!-- Puesto -->
+                                <div class="input-group mb-4">
+                                    <select name="puesto" id="puesto" class="form-control" required>
+                                        <option value="" disabled selected>Puesto de Interés</option>
+                                        <option value="ventas">Ventas</option>
+                                        <option value="logistica">Logística</option>
+                                        <option value="atencion">Atención al Cliente</option>
+                                        <option value="marketing">Marketing</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                    <span class="input-group-text">
+                                        <i class="custom-form-icon bi-briefcase"></i>
+                                    </span>
+                                </div>
+
+                                <!-- Mensaje -->
+                                <div class="mb-4">
+                                    <textarea name="mensaje" id="mensaje" class="form-control" rows="4" placeholder="¿Por qué quieres trabajar con nosotros?" required></textarea>
+                                </div>
+
                                 <!-- Botón -->
                                 <div class="col-lg-8 col-md-10 col-8 mx-auto">
-                                    <button type="submit" class="form-control btn-submit">Enviar Solicitud</button>
+                                    <button type="submit" class="form-control">Enviar Solicitud</button>
                                 </div>
                             </div>
                         </form>
                     </div>
 
-                    <!-- Información de Contacto -->
                     <div class="col-lg-6 col-12">
                         <h2 class="mb-4">Contacto</h2>
 

@@ -1,0 +1,571 @@
+/* ============================================
+   RESET Y BASE
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #2c3e50;
+    background: #f5f7fa;
+    line-height: 1.6;
+}
+
+/* ============================================
+   LAYOUT GRID SYSTEM
+   ============================================ */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-12 {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.col-lg-5 {
+    width: 41.666667%;
+    padding: 0 15px;
+}
+
+.col-lg-6 {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.col-md-10 {
+    width: 83.333333%;
+    padding: 0 15px;
+}
+
+.col-lg-8 {
+    width: 66.666667%;
+    padding: 0 15px;
+}
+
+.col-8 {
+    width: 66.666667%;
+    padding: 0 15px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+
+.text-center {
+    text-align: center;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.me-2 {
+    margin-right: 0.5rem;
+}
+
+.bg-white {
+    background: white;
+}
+
+.shadow {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   HEADER & NAVEGACIÓN
+   ============================================ */
+
+.header-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.header-sticky {
+    transition: all 0.3s ease;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.main-nav .nav {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav .nav li {
+    display: inline-block;
+}
+
+.main-nav .nav li a {
+    display: block;
+    padding: 10px 20px;
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.main-nav .nav li a:hover {
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.main-nav .nav li a.active {
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.menu-trigger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-trigger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #2c3e50;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   SECCIÓN DE CONTACTO
+   ============================================ */
+
+.contact-section {
+    padding: 140px 0 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+/* ============================================
+   FORMULARIO
+   ============================================ */
+
+.custom-form {
+    padding: 50px 40px;
+    border-radius: 20px;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15) !important;
+}
+
+.custom-form h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.ebook-download-form-body {
+    padding: 20px 0 0;
+}
+
+/* Input Groups */
+.input-group {
+    position: relative;
+    display: flex;
+}
+
+.input-group .form-control {
+    flex: 1;
+    border: 2px solid #e8ecf1;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #fafbfc;
+    font-family: inherit;
+}
+
+.input-group .form-control:focus {
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    outline: none;
+}
+
+.input-group-text {
+    background: #fafbfc;
+    border: 2px solid #e8ecf1;
+    border-left: none;
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 16px 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.input-group .form-control:focus + .input-group-text {
+    border-color: #667eea;
+    background: white;
+}
+
+.custom-form-icon {
+    font-size: 1.3rem;
+    color: #667eea;
+}
+
+/* Textarea sin input-group */
+.custom-form textarea.form-control {
+    width: 100%;
+    border: 2px solid #e8ecf1;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fafbfc;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.custom-form textarea.form-control:focus {
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    outline: none;
+}
+
+/* Select */
+.custom-form select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23667eea' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 45px;
+    cursor: pointer;
+}
+
+/* Botón */
+.custom-form button[type="submit"] {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 16px 30px;
+    font-weight: 600;
+    color: white;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.custom-form button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.custom-form button[type="submit"]:active {
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   INFORMACIÓN DE CONTACTO
+   ============================================ */
+
+.contact-section h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: #5a6c7d;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-section p i {
+    font-size: 1.3rem;
+    color: #667eea;
+}
+
+.contact-link {
+    color: #667eea;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    color: #764ba2;
+    padding-left: 5px;
+}
+
+.site-footer-title {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* Iconos Sociales */
+.social-icon {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icon-item {
+    display: inline-block;
+}
+
+.social-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.social-icon-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    color: white;
+}
+
+.copyright-text {
+    margin-top: 30px;
+    color: #7f8c9a;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.copyright-text a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.copyright-text a:hover {
+    color: #764ba2;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 991px) {
+    .col-lg-5,
+    .col-lg-6 {
+        width: 100%;
+    }
+
+    .contact-section {
+        padding: 100px 0 60px;
+    }
+    
+    .custom-form {
+        margin-bottom: 60px;
+    }
+    
+    .col-lg-6.col-12 h2 {
+        text-align: center;
+    }
+    
+    .contact-section p {
+        justify-content: center;
+    }
+    
+    .social-icon {
+        justify-content: center;
+    }
+    
+    .copyright-text {
+        text-align: center;
+    }
+
+    .site-footer-title {
+        text-align: center;
+    }
+
+    .main-nav .nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-nav .nav.active {
+        display: flex;
+    }
+
+    .menu-trigger {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-10,
+    .col-lg-8 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-8 {
+        width: 100%;
+    }
+
+    .custom-form {
+        padding: 40px 25px;
+    }
+    
+    .custom-form h2 {
+        font-size: 1.6rem;
+    }
+    
+    .contact-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .input-group .form-control,
+    .input-group-text {
+        padding: 14px 16px;
+        font-size: 0.95rem;
+    }
+    
+    .custom-form button[type="submit"] {
+        padding: 14px 25px;
+        font-size: 0.95rem;
+    }
+
+    .social-icon-link {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .main-nav .nav li a {
+        padding: 12px 20px;
+    }
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.custom-form,
+.col-lg-6.col-12 > * {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
