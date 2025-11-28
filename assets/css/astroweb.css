@@ -739,23 +739,13 @@ Banner Style
 --------------------------------------------- 
 */
 
-/* Estilo general (PC o pantallas grandes) */
 .main-banner .item {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 150px 10% 10px 20%;
-  margin-top: 10px; /* PC */
+  padding: 220px 20% 320px 20%;
+  margin-top: 0px;
 }
-
-/* Para móviles (pantallas menores o iguales a 768px) */
-@media (max-width: 768px) {
-  .main-banner .item {
-    margin-top: 80px; /* móvil */
-    padding: 80px 5% 10px 5%; /* opcional si quieres ajustarlo en móvil */
-  }
-}
-
 
 .main-banner .item-1 {
   background-image: url(../images/banner-01.jpg);
@@ -798,7 +788,7 @@ Banner Style
 
 .main-banner .owl-dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 60px;
   left: 20%;
 }
 
@@ -824,7 +814,7 @@ Banner Style
 
 .main-banner .owl-nav .owl-prev i,
 .main-banner .owl-nav .owl-next i {
-  width: 0px;
+  width: 50px;
   height: 50px;
   line-height: 50px;
   font-size: 24px;
@@ -852,6 +842,9 @@ Banner Style
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+
+
+/* 
 
 
 /* 
