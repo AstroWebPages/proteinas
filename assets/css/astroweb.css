@@ -2174,10 +2174,12 @@ body {
   }
 }
 
-.logo-img {
-    width: 200px;
-    height: auto; /* duplicado */
+.logo, .logo img {
+    max-width: none !important;
+    width: 80px !important;
+    height: auto !important;
 }
+
 
 /* CSS PARTY ROSE */
 

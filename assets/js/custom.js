@@ -252,3 +252,132 @@ function actualizarInputHidden() {
 
   document.getElementById("diseno").value = seleccionados.join(", ");
 }
+// ==========================================
+//  LÓGICA DE CÁLCULO DE PRECIO Y PESO
+// ==========================================
+
+// Esta función se llama cada vez que tocas una caja o cambias un número
+function actualizarPrecioTotal() {
+  let total = 0;
+  let totalUnidades = 0;
+  let totalPesoGramos = 0;
+
+  // Recorrer todas las cajas para sumar
+  document.querySelectorAll('.caja').forEach(caja => {
+    // Obtenemos precio y peso (Si no tiene peso, asume 0)
+    const precioUnitario = parseFloat(caja.dataset.precio) || 0;
+    const pesoUnitario = parseFloat(caja.dataset.peso) || 0; 
+    
+    // Obtenemos la cantidad dentro del input
+    const inputCant = caja.querySelector('.input-cantidad');
+    const cantidad = inputCant ? (parseInt(inputCant.value) || 0) : 0;
+
+    if (cantidad > 0) {
+        total += cantidad * precioUnitario;
+        totalUnidades += cantidad;
+        totalPesoGramos += cantidad * pesoUnitario;
+    }
+  });
+
+  // --- Lógica de Descuentos ---
+  let descuentoPorc = 0;
+  if (totalUnidades >= 6 && totalUnidades < 10) {
+    descuentoPorc = 5;
+  } else if (totalUnidades === 10) {
+    descuentoPorc = 10;
+  } else if (totalUnidades > 10) {
+    descuentoPorc = 15;
+  }
+
+  let descuento = total * (descuentoPorc / 100);
+  let totalFinal = total - descuento;
+
+  // --- Mostrar en pantalla ---
+  
+  // 1. Precio
+  const precioEl = document.getElementById('precioTotal');
+  if(precioEl) precioEl.textContent = totalFinal.toFixed(2);
+
+  // 2. Peso (Convertido a KG)
+  const pesoEl = document.getElementById('pesoTotal');
+  if(pesoEl) {
+      let pesoKg = totalPesoGramos / 1000;
+      pesoEl.textContent = pesoKg.toFixed(2);
+  }
+
+  // 3. Texto del descuento
+  const descuentoInfo = document.getElementById('descuentoInfo');
+  if (descuentoInfo) {
+      if (descuentoPorc > 0) {
+        descuentoInfo.textContent = `¡Descuento aplicado: ${descuentoPorc}% (-$${descuento.toFixed(2)})!`;
+      } else {
+        descuentoInfo.textContent = "";
+      }
+  }
+}
+
+// Función para el botón de WhatsApp
+function enviarWhatsApp() {
+  const productoEl = document.getElementById("producto");
+  const producto = productoEl ? productoEl.innerText : "Pedido";
+  
+  const detalleEl = document.getElementById("detalle");
+  const detalle = detalleEl ? detalleEl.value.trim() : "";
+
+  let disenoDetalle = "";
+  let total = 0;
+  let totalUnidades = 0;
+  let totalPesoGramos = 0;
+
+  document.querySelectorAll('.caja').forEach(caja => {
+    const nombre = caja.dataset.valor;
+    const precio = parseFloat(caja.dataset.precio) || 0;
+    const peso = parseFloat(caja.dataset.peso) || 0;
+    
+    const inputCant = caja.querySelector('.input-cantidad');
+    const cantidad = inputCant ? (parseInt(inputCant.value) || 0) : 0;
+
+    if (cantidad > 0) {
+      const subtotal = cantidad * precio;
+      disenoDetalle += `• ${nombre} x${cantidad} = $${subtotal.toFixed(2)}\n`;
+      total += subtotal;
+      totalUnidades += cantidad;
+      totalPesoGramos += cantidad * peso;
+    }
+  });
+
+  if (disenoDetalle === "") {
+    alert("⚠️ Por favor, selecciona al menos un producto.");
+    return;
+  }
+
+  // Recalcular descuento para el mensaje
+  let descuentoPorc = 0;
+  if (totalUnidades >= 6 && totalUnidades < 10) descuentoPorc = 5;
+  else if (totalUnidades === 10) descuentoPorc = 10;
+  else if (totalUnidades > 10) descuentoPorc = 15;
+
+  let descuento = total * (descuentoPorc / 100);
+  let totalFinal = total - descuento;
+  let pesoKg = totalPesoGramos / 1000;
+
+  // Construir mensaje
+  let mensaje = `📦 *Pedido ÉXITO*\n\n` +
+                `🧸 *Producto:* ${producto}\n` +
+                `🎨 *SKU seleccionado(s):*\n${disenoDetalle}` +
+                `📦 *Unidades:* ${totalUnidades}\n` +
+                `⚖️ *Peso Total:* ${pesoKg.toFixed(2)} kg\n`;
+
+  if (descuentoPorc > 0) {
+    mensaje += `✅ *Descuento:* ${descuentoPorc}% (-$${descuento.toFixed(2)})\n`;
+  }
+
+  mensaje += `💵 *Total a pagar:* $${totalFinal.toFixed(2)}`;
+
+  if (detalle !== "") {
+    mensaje += `\n\n📝 *Detalle:* ${detalle}`;
+  }
+
+  let url = `https://wa.me/+50376106996?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, '_blank');
+}
