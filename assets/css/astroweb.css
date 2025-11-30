@@ -750,16 +750,16 @@ Banner Style
 /* CARROUSEL PC*/
 
 .main-banner .item-1 {
-  background-image: url(../images/banner-01.jpeg);
+  background-image: url(../images/banner-01-pc.jfif);
 }
 
 .main-banner .item-2 {
-  background-image: url(../images/banner-02.jpg);
+  background-image: url(../images/banner-02-pc.jpg);
 
 }
 
 .main-banner .item-3 {
-  background-image: url(../images/banner-03.jpg);
+  background-image: url(../images/banner-02-pc.webp);
 }
 
 /* CARROUSEL mv*/
@@ -769,12 +769,12 @@ Banner Style
 }
 
 .main-banner .item-m2 {
-  background-image: url(../images/banner-02.jpg);
+  background-image: url(../images/banner-02-mv.jpg);
 
 }
 
 .main-banner .item-m3 {
-  background-image: url(../images/banner-03.jpg);
+  background-image: url(../images/banner-03-mv.jfif);
 }
 
 
