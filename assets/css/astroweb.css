@@ -747,8 +747,10 @@ Banner Style
   margin-top: 0px;
 }
 
+/* CARROUSEL PC*/
+
 .main-banner .item-1 {
-  background-image: url(../images/banner-01.jpg);
+  background-image: url(../images/banner-01.jpeg);
 }
 
 .main-banner .item-2 {
@@ -759,6 +761,23 @@ Banner Style
 .main-banner .item-3 {
   background-image: url(../images/banner-03.jpg);
 }
+
+/* CARROUSEL mv*/
+
+.main-banner .item-m1 {
+  background-image: url(../images/banner-01.jpeg);
+}
+
+.main-banner .item-m2 {
+  background-image: url(../images/banner-02.jpg);
+
+}
+
+.main-banner .item-m3 {
+  background-image: url(../images/banner-03.jpg);
+}
+
+
 
 .main-banner .item span.category {
   background-color: #fff;
@@ -1261,6 +1280,23 @@ Properties Style
 }
 
 
+/* PC visible, móvil oculto */
+.pc-carousel {
+  display: block;
+}
+.mobile-carousel {
+  display: none;
+}
+
+/* Cuando es móvil */
+@media (max-width: 768px) {
+  .pc-carousel {
+    display: none;
+  }
+  .mobile-carousel {
+    display: block;
+  }
+}
 
 
 
@@ -2180,6 +2216,19 @@ body {
     height: auto !important;
 }
 
+.select-puesto {
+    width: 100%;
+    height: 44px;
+    border-radius: 22px;
+    background-color: #f6f6f6;
+    border: none;
+    margin-bottom: 30px;
+    font-size: 14px;
+    padding: 0px 15px;
+    appearance: none;       /* oculta flecha fea en algunos navegadores */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 
 /* CSS PARTY ROSE */
 
