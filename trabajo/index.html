@@ -84,10 +84,7 @@
           </div>
 
           <p>
-            En <strong>NutritionSV</strong> estamos en crecimiento y buscamos personas responsables, dinámicas y con deseos de superarse.
-            Completa el formulario y envía tu solicitud para aplicar a uno de nuestros puestos disponibles.
-<br><br>
-Estamos ubicados en  Colonia Médica, 25 Avenida Norte, y 27 calle poniente, frente a edificio L de medicentro la esperanza, segundo nivel, San Salvador
+            En <strong>NutritionSV</strong> tenemos un apartado para mujeres y hombres que buscan salud, prosperidad y ÉXITO. <br>Siendo distribuidores, lideres y profesionales de la salud y el bienestar. <br>
             
           </p>
 
@@ -95,7 +92,7 @@ Estamos ubicados en  Colonia Médica, 25 Avenida Norte, y 27 calle poniente, fre
             <div class="col-lg-12">
               <div class="item phone" data-href="tel:+50376106996">
                 <img draggable="false" src="../assets/images/phone-icon.png" alt="" style="max-width: 52px;">
-                <h6><a style="color: black;" href="tel:+50376106996">+503 7610-6996</a><br><span>No esperes más y llama ya!</span></h6>
+                <h6><a style="color: black;" href="tel:+50376106996">+503 7610-6996</a><br><span>Agenda una presentación de beneficios... <br> ¡Ahora mismo!</span></h6>
               </div>
             </div>
             <div class="col-lg-12">
@@ -135,20 +132,15 @@ Estamos ubicados en  Colonia Médica, 25 Avenida Norte, y 27 calle poniente, fre
 
                   <select name="puesto" id="puesto" class="select-puesto" required>
                         <option value="" disabled selected>Selecciona un puesto</option>
-                        <option value="ventas">Ventas</option>
-                        <option value="logistica">Logística</option>
-                        <option value="atencion">Atención al Cliente</option>
-                        <option value="marketing">Marketing</option>
+                        <option value="Distribuidor de productos">Distribuidor de productos</option>
+                        <option value="Líder de equipos">Líder de equipos</option>
+                        <option value="Asociado independiente">Asociado independiente</option>
+                        <option value="Networker business">Networker business</option>
                         <option value="otro">Otro</option>
                     </select>
 
 
-                  <div class="col-lg-12" >
-                      <fieldset>
-                          <label for="mensaje">¿Por qué quieres trabajar con nosotros?</label>
-                          <textarea name="mensaje" id="mensaje" placeholder="Cuéntanos sobre ti..."></textarea>
-                      </fieldset>
-                  </div>
+                  
 
                   <div class="col-lg-12">
                       <fieldset>
@@ -173,7 +165,6 @@ Estamos ubicados en  Colonia Médica, 25 Avenida Norte, y 27 calle poniente, fre
         const email = document.getElementById("email").value;
         const telefono = document.getElementById("telefono").value;
         const puesto = document.getElementById("puesto").value;
-        const mensaje = document.getElementById("mensaje").value;
 
         const numero = "50376106996";
 
@@ -181,9 +172,7 @@ Estamos ubicados en  Colonia Médica, 25 Avenida Norte, y 27 calle poniente, fre
                       `👤 Nombre: ${nombre}%0A` +
                       `📧 Email: ${email}%0A` +
                       `📱 Teléfono: ${telefono}%0A` +
-                      `💼 Puesto: ${puesto}%0A` +
-                      `📝 Mensaje: ${mensaje}`;
-
+                      `💼 Puesto: ${puesto}%0A`;
         const url = `https://wa.me/${numero}?text=${texto}`;
         window.open(url, "_blank");
     });

@@ -744,7 +744,7 @@ Banner Style
   background-repeat: no-repeat;
   background-size: cover;
   padding: 220px 20% 320px 20%;
-  margin-top: 0px;
+  margin-top: auto;
 }
 
 /* CARROUSEL PC*/
@@ -1417,6 +1417,7 @@ Properties Style
   display: inline-block;
   max-width: 100%;
 }
+
 
 
 
