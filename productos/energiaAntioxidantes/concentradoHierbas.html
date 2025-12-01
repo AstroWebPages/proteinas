@@ -108,13 +108,20 @@
                       <div class="info-table">
                         <ul>
                           <li>CATEGORÍA <span>Nutrición</span></li>
-                          <li>C. N. <span>000 ml</span></li>
-
                         </ul>
+                        </ul>
+                        <div class="precio-total" style="margin-top:20px; padding: 15px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
+                        <div style="font-size: 1.2rem; margin-bottom: 5px;">
+                         <strong>Total: $<span id="precioTotal">0.00</span></strong>
+                        </div>
+                        <div style="font-size: 1rem; color: #555; margin-bottom: 5px;">
+                        Peso neto total: <strong><span id="pesoTotal">0.00</span> kg</strong>
+                       </div>
+                       <span id="descuentoInfo" style="color: green; font-weight: bold;"></span>
+                       </div>
                       </div>
                     </div>
                    <div class="col-lg-6">
-  <!-- Selector visual múltiple -->
   <label for="diseno">Seleccionar:</label>
   <input type="hidden" id="diseno" name="diseno" />
 
@@ -122,7 +129,7 @@
   
   
   
-  <div class="caja" data-valor="1638" data-precio="37.70">
+  <div class="caja" data-valor="1638" data-precio="37.70" data-peso="51">
       <img draggable="false" src="../../assets/images/productos/energiaAntioxidantes/pc-1638-sv.webp" alt="">
     51g Sabor CHAI
     <div class="contador" style="display:none;">
@@ -130,7 +137,7 @@
       </div>
     </div>
 
-    <div class="caja" data-valor="0105" data-precio="37.70">
+    <div class="caja" data-valor="0105" data-precio="37.70" data-peso="51">
       <img draggable="false" src="../../assets/images/productos/energiaAntioxidantes/pc-0105-sv.webp" alt="">
     sabor Original 51g
     <div class="contador" style="display:none;">
@@ -138,7 +145,7 @@
       </div>
     </div>
 
-    <div class="caja" data-valor="0106" data-precio="66.10">
+    <div class="caja" data-valor="0106" data-precio="66.10" data-peso="102">
       <img draggable="false" src="../../assets/images/productos/energiaAntioxidantes/pc-0106-sv.webp" alt="">
     Original 102g
     <div class="contador" style="display:none;">
@@ -169,7 +176,7 @@
                       </div>
   <!-- SECCIÓN PRECIO TOTAL -->
   <div class="precio-total" style="margin-top:20px;">
-  <strong>Total: $<span id="precioTotal">0.00</span></strong><br>
+  <strong><span id="precioTotal"></span></strong><br>
   <span id="descuentoInfo" style="color: green; font-weight: bold;"></span>
 </div>
 

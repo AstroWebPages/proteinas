@@ -2654,6 +2654,20 @@ a.no-drag, a.no-drag img {
   border-color: #ffffff;
 }
 
+/* Ocultar flechas por defecto */
+.input-cantidad::-webkit-inner-spin-button,
+.input-cantidad::-webkit-outer-spin-button {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Cuando la caja está seleccionada → mostrar flechas */
+.caja.seleccionado .input-cantidad::-webkit-inner-spin-button,
+.caja.seleccionado .input-cantidad::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .selector-cajas {

@@ -108,9 +108,18 @@
                       <div class="info-table">
                         <ul>
                           <li>CATEGORÍA <span>Nutrición</span></li>
-                          <li>C. N. <span>000 ml</span></li>
 
                         </ul>
+                        </ul>
+                        <div class="precio-total" style="margin-top:20px; padding: 15px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
+                        <div style="font-size: 1.2rem; margin-bottom: 5px;">
+                         <strong>Total: $<span id="precioTotal">0.00</span></strong>
+                        </div>
+                        <div style="font-size: 1rem; color: #555; margin-bottom: 5px;">
+                        Peso neto total: <strong><span id="pesoTotal">0.00</span> kg</strong>
+                       </div>
+                       <span id="descuentoInfo" style="color: green; font-weight: bold;"></span>
+                       </div>
                       </div>
                     </div>
                    <div class="col-lg-6">
@@ -122,9 +131,9 @@
   
   
   
-  <div class="caja" data-valor="208K" data-precio="97.66">
+  <div class="caja" data-valor="208K" data-precio="97.66" data-peso="150">
       <img draggable="false" src="../../assets/images/productos/energiaAntioxidantes/pc-208K-sv.webp" alt="">
-    GRANADA FRESA EN POLVO (30 sobres)
+    GRANADA FRESA EN POLVO (30 stick packs)
     <div class="contador" style="display:none;">
       <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
       </div>
@@ -153,7 +162,7 @@
                       </div>
   <!-- SECCIÓN PRECIO TOTAL -->
   <div class="precio-total" style="margin-top:20px;">
-  <strong>Total: $<span id="precioTotal">0.00</span></strong><br>
+  <strong><span id="precioTotal"></span></strong><br>
   <span id="descuentoInfo" style="color: green; font-weight: bold;"></span>
 </div>
 

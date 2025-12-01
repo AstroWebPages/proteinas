@@ -109,6 +109,14 @@
                         <ul>
                           <li>CATEGORÍA <span>Nutrición</span></li>
                         </ul>
+                           <div class="precio-total" style="margin-top:20px; padding: 15px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
+                          <div style="font-size: 1.2rem; margin-bottom: 5px;">
+                          <strong>Total: $<span id="precioTotal">0.00</span></strong>
+                          </div>
+                          <div style="font-size: 1rem; color: #555; margin-bottom: 5px;">Peso neto total: <strong><span id="pesoTotal">0.00</span> kg</strong>
+                         </div>
+                        <span id="descuentoInfo" style="color: green; font-weight: bold;"></span>
+                      </div>
                       </div>
                     </div>
                    <div class="col-lg-6">
@@ -120,7 +128,7 @@
   
   
   
-  <div class="caja" data-valor="2864" data-precio="43.35">
+  <div class="caja" data-valor="2864" data-precio="43.35" data-peso="210">
       <img draggable="false" src="../../assets/images/productos/aloeDigestiva/pc-2864-sv.webp" alt="">
     Fibra Activa - 210 g
     <div class="contador" style="display:none;">
@@ -151,7 +159,7 @@
                       </div>
   <!-- SECCIÓN PRECIO TOTAL -->
   <div class="precio-total" style="margin-top:20px;">
-  <strong>Total: $<span id="precioTotal">0.00</span></strong><br>
+  <strong><span id="precioTotal"></span></strong><br>
   <span id="descuentoInfo" style="color: green; font-weight: bold;"></span>
 </div>
 
