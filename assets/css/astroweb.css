@@ -151,7 +151,7 @@ body {
 }
 
 .section-heading h6 {
-  color: #249fdd;
+  color: #7bb041;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 700;
@@ -676,7 +676,7 @@ Header Style
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #249fdd!important;
+    color: #7bb041!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
