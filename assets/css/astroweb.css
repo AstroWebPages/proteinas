@@ -1257,15 +1257,15 @@ Properties Style
 @media (max-width: 768px) {
   .properties-items .item {
     width: 100%;
-    max-width: 246px;
-    height: 300px;
-    min-height: 300px;
-    max-height: 300px;
+    max-width: none;
+    height: auto;
+    min-height: 300px; /* opcional */
     overflow: hidden;
-  }
+  
+}
 
-  /* Ocultar en móvil */
-  .properties-items .item h4,
+
+  /* Ocultar en móvil PRODUCTOS */
   .properties-items .item ul,
   .properties-items .item .main-button {
     display: none;
